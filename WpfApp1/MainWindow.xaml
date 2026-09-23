@@ -7,6 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+		<Grid.RowDefinitions>
+			<RowDefinition height="500"/>
+			<RowDefinition height="Auto"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition width="650*"/>
+			<ColumnDefinition width="200*"/>
+		</Grid.ColumnDefinitions>
+		<StackPanel Background="#FFF7DFDF">
+		</StackPanel>
     </Grid>
 </Window>
