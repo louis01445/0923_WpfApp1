@@ -9,7 +9,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace _2026_WpfApp2
+namespace _0923_WpfApp2
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
