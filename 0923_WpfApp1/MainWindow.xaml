@@ -15,6 +15,8 @@
             <ColumnDefinition Width="7*"/>
             <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
+        <Button x:Name="OrderButton" Grid.Column="1" Content="訂購" HorizontalAlignment="Left" Margin="50,100,0,0" VerticalAlignment="Top" Height="60" Width="120" FontSize="16" Click="OrderButton_Click"/>
+        <TextBlock x:Name="ResultTextBlock" Grid.Row="1" Margin="20,5,20,-46" Grid.ColumnSpan="2" Background="#FFF9FBE3" FontSize="16" Padding="10,10,10,10"/>
         <StackPanel Background="#FF919A85">
             <StackPanel Height="36" Margin="5, 5, 5, 5" Background="#FFD5EDED" Orientation="Horizontal">
                 <Label Content="紅茶大杯" FontSize="14" VerticalContentAlignment="Center" Margin="20,0,0,0" Height="26" FontWeight="Bold" Foreground="Brown"/>
@@ -47,7 +49,5 @@
                 <TextBox FontSize="14" VerticalContentAlignment="Center" Margin="100, 0, 0, 0" Height="26" Width="100" HorizontalContentAlignment="Right" TextChanged="TextBox_TextChanged" />
             </StackPanel>
         </StackPanel>
-        <Button x:Name="OrderButton" Grid.Column="1" Content="訂購" HorizontalAlignment="Left" Margin="50,100,0,0" VerticalAlignment="Top" Height="60" Width="120" FontSize="16" Click="OrderButton_Click"/>
-        <TextBlock x:Name="ResultTextBlock" Grid.Row="1" Margin="20,5,20,-46" Grid.ColumnSpan="2" Background="#FFF9FBE3" FontSize="16" Padding="10,10,10,10"/>
     </Grid>
 </Window>
