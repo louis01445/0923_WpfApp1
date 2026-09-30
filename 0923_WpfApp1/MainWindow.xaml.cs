@@ -12,38 +12,39 @@ namespace _0923_WpfApp1
 {
     public partial class MainWindow : Window
     {
+        Dictionary<string int> drinls = new Dictionary<string, int>()
+                {
+            {"紅茶大杯", 45},
+            {"紅茶小杯", 45},
+            {"綠茶大杯", 45},
+            {"綠茶小杯", 45},
+            {"可樂大杯", 45},
+            {"可樂小杯", 45}
+        };
         public MainWindow()
         {
             InitializeComponent();
         }
 
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            var targetTextBox = sender as TextBox;
-            var targetStackPanel = targetTextBox.Parent as StackPanel;
-            var targetNameLabel = targetStackPanel.Children[0] as Label;
-            var targetPriceLabel = targetStackPanel.Children[1] as Label;
-
-            int amount;
-            bool success = int.TryParse(targetTextBox.Text, out amount);
-            if (!success)
-            {
-                MessageBox.Show("請輸入正確數值", "輸入錯誤");
-                //targetTextBox.Text = "";
-            }
-            else
-            {
-                string drinkName = targetNameLabel.Content.ToString();
-                int price = Convert.ToInt32(targetPriceLabel.Content.ToString().Substring(0, 2));
-                //MessageBox.Show($"您選擇了 {drinkName}，數量為 {amount}，總價為 {price * amount} 元", "訂購資訊");
-                ResultTextBlock.Text += $"您選擇了 {drinkName}，數量為 {amount}，總價為 {price * amount} 元\n";
-            }
-        }
-
-        private void OrderButton_Click(object sender, RoutedEventArgs e)
+        Dictionary<string, int> order = new Dictionary<string, int>()
         {
 
-        }
+        };
+        private void orderButton_Click(object sender, RoutedEventArgs e)
+        {
+            order.Clear();
+            resultMessage = "";
+            for (int i = 0 i < DrinkMenuStackPanel.Children.Count; i++)
+            {
+                var sp = Drink MenuStackPanel.Children[i] as StackPanel;
+                var cb sp.Children[0] as CheckBox;
+                var sl = sp.Children[2] as Slider;
+                int quantity = (int)sl.Value;
+                if (cb.IsChecked == true && quantity > 0)
+                {
+                    string drinkName = cb.Content.ToString();
+                int price = (int)sl.Value;
+                }
+            }
     }
 }
