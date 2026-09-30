@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:_0923_WpfApp1"
         mc:Ignorable="d"
          Title="WPF飲料訂購ver2" Height="500" Width="630">
-    <Grid Height="476" VerticalAlignment="Top">
+    <Grid Margin="0,0,0,9" Background="Blue">
         <Grid.RowDefinitions>
             <RowDefinition Height="53"/>
             <RowDefinition Height="270"/>
@@ -17,7 +17,7 @@
             <ColumnDefinition Width="457"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <GroupBox Header="內用/外帶">
+        <GroupBox Header="內用/外帶" Foreground="White">
             <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Background="Gray">
                 <RadioButton x:Name="radioButtonInStore" Content="內用" Margin="75,0,0,0" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold"/>
                 <RadioButton x:Name="radioButtonInStore1" Content="外帶" Margin="75,0,0,0" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold"/>
@@ -61,7 +61,7 @@
                 <Label Content="{Binding Value, ElementName=slider6}" VerticalContentAlignment="Center" FontSize="14px" />
             </StackPanel>
         </StackPanel>
-        <TextBlock x:Name="ResultTextBlock" Margin="10,10,10,10" Grid.Row="2" TextWrapping="Wrap" Background="Gray" Grid.ColumnSpan="2" Grid.RowSpan="2" FontSize="14" Padding="10,10,10,10"/>
+        <TextBlock x:Name="ResultTextBlock" Margin="10,10,10,10" Grid.Row="2" TextWrapping="Wrap" Background="Gray" Grid.ColumnSpan="2" Grid.RowSpan="2" FontSize="14" Padding="0,10,10,10"/>
         <Button x:Name="OrderButton" Grid.Column="1" Content="訂購" Margin="62,62,46,149" Grid.Row="1" FontSize="16" Click="OrderButton_Click"/>
 
     </Grid>
